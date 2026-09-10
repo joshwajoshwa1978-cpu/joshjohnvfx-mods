@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="JoshJohnVFX Mods — RealVoidWave Game Mod Hub">
+<title>JoshJohnVFX Mods</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;color:#eef6ff;background:#070b12;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;overflow-x:hidden}.orb{position:fixed;width:360px;height:360px;border-radius:50%;filter:blur(110px);opacity:.2;pointer-events:none}.o1{background:#168bd1;top:-140px;left:-120px}.o2{background:#7b4dff;right:-150px;bottom:-140px}.nav{height:76px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff12;background:#07101bd9;backdrop-filter:blur(22px);position:sticky;top:0;z-index:5}.brand{color:#fff;text-decoration:none;font-weight:850}.brand span{display:inline-grid;place-items:center;width:37px;height:37px;border:1px solid #ffffff25;border-radius:12px;margin-right:8px;background:#ffffff0d}.tg,.heroBtn,.card a{color:#fff;text-decoration:none;border:1px solid #ffffff1c;background:#ffffff0b;padding:11px 17px;border-radius:14px;transition:.2s}.tg:hover,.heroBtn:hover,.card a:hover{transform:translateY(-2px);background:#ffffff16}.hero{max-width:1050px;margin:auto;padding:90px 6% 55px;text-align:center}.eyebrow{font-size:12px;letter-spacing:3px;color:#70c8ff;font-weight:700;margin-bottom:18px}.hero h1{font-size:clamp(44px,8vw,86px);line-height:.98;margin:0;font-weight:900;letter-spacing:-4px}.hero h1 b{background:linear-gradient(90deg,#fff,#7acfff);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:650px;margin:22px auto 30px;color:#9eafc0;font-size:17px;line-height:1.6}.heroBtn{display:inline-block}.toolbar{max-width:1100px;margin:0 auto 22px;padding:0 6%;display:flex;gap:12px;align-items:center}.toolbar input{width:100%;padding:15px 18px;border-radius:16px;border:1px solid #ffffff16;outline:0;color:#fff;background:#ffffff08;backdrop-filter:blur(16px);font-size:15px}.count{white-space:nowrap;color:#8193a6;font-size:13px}.grid{max-width:1100px;margin:auto;padding:0 6% 80px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{border:1px solid #ffffff12;background:linear-gradient(145deg,#ffffff0e,#ffffff05);border-radius:22px;padding:20px;backdrop-filter:blur(20px);box-shadow:0 20px 60px #0005;transition:.25s}.card:hover{transform:translateY(-5px);border-color:#55bfff38}.icon{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:#ffffff0b;border:1px solid #ffffff16;font-size:24px;margin-bottom:18px}.tag{font-size:11px;color:#72caff;letter-spacing:1.2px;font-weight:700}.card h2{font-size:19px;margin:7px 0 9px;line-height:1.3}.meta{font-size:13px;color:#8193a6;margin-bottom:19px}.card a{display:block;text-align:center;padding:12px}footer{text-align:center;color:#647588;border-top:1px solid #ffffff0c;padding:25px;font-size:12px}@media(max-width:560px){.nav{padding:0 4%}.tg{padding:9px 12px}.hero{padding-top:65px}.hero h1{letter-spacing:-2px}.toolbar{display:block}.count{margin-top:9px}.grid{padding-bottom:55px}}
+</style>
+</head>
+<body>
+<div class="orb o1"></div><div class="orb o2"></div>
+<header class="nav">
+<a class="brand" href="#"><span>J</span>JoshJohnVFX</a>
+<a class="tg" href="https://t.me/joshjohnvfx" target="_blank">Telegram ↗</a>
+</header>
+<main>
+<section class="hero">
+<div class="eyebrow">REALVOIDWAVE • MOD HUB</div>
+<h1>JoshJohnVFX <b>Mods</b></h1>
+<p>Discover the latest mod posts from the JoshJohnVFX Telegram channel.</p>
+<a class="heroBtn" href="https://t.me/joshjohnvfx" target="_blank">Join Telegram</a>
+</section>
+<section class="toolbar">
+<input id="search" type="search" placeholder="Search mods...">
+<div class="count" id="count"></div>
+</section>
+<section class="grid" id="grid"></section>
+</main>
+<footer>© 2026 JoshJohnVFX • RealVoidWave</footer>
+<script>
+const mods=[
+["Truecaller Premium","v26.33.6","107.8 MB","☎"],
+["Niffelheim","v1.8.20","213.1 MB","❄"],
+["Toca Boca World","v1.138.1","930.7 MB","🎮"],
+["Pocket Love","v4.5","264.7 MB","💗"],
+["Subway Surfers City","v2.4.1-v8","215.0 MB","🏃"],
+["Focus Friend","Game Mod","239.6 MB","⏱"]
+];
+const grid=document.getElementById("grid"),search=document.getElementById("search"),count=document.getElementById("count");
+function render(list){count.textContent=list.length+" mods";grid.innerHTML=list.map(m=>`<article class="card"><div class="icon">${m[3]}</div><div class="tag">TELEGRAM POST #180</div><h2>${m[0]}</h2><div class="meta">${m[1]} • ${m[2]}</div><a href="https://t.me/joshjohnvfx/180" target="_blank">View on Telegram ↗</a></article>`).join("")}
+search.oninput=()=>{let q=search.value.toLowerCase();render(mods.filter(m=>(m[0]+" "+m[1]).toLowerCase().includes(q)))};
+render(mods);
+</script>
+</body>
+</html>
